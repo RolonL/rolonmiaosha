@@ -22,19 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @MapperScan("com.rolonmiaosha.dao")
 public class App
 {
-    @Autowired
-    private UserMapper userMapper;
 
-    @RequestMapping("/")
-    public  String home(){
-        User user=userMapper.selectByPrimaryKey(1);
-        if (user==null){
-            return "用户不存在";
-        }else {
-            return user.getName();
-        }
-
-    }
 
     public static void main( String[] args )
     {
